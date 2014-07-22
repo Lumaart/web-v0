@@ -1,15 +1,17 @@
 .navigationBar {
 	width: 100%;
 	height: 5em;
-	background-color: rgba(0,255,255,0.7);
-	position: relative;
+	background-color: rgba(50,25,255,0.7);
+	position: fixed;
+	padding: 0.4em;
 }
 
 .navigationLinks {
 	list-style: none;
 	line-height: 5em;
 	float: right;
-	background-color: green;
+	*background-color: green;
+	margin-right: 6.5em;
 }
 
 .navigationLinks li {
@@ -17,19 +19,34 @@
 	display: inline;
 }
 
+.navigationLinks a:last-child li{
+	margin-right: 0;
+}
+
 .navigationLinks a, .navigationLinks a:hover,.navigationLinks a:visited, .navigationLinks a:active {
 	text-decoration: none;
 	color: #fff;
+	font-weight: 300;
+	font-size: 1.3em;
 }
 
 .logoBox {
-	width: 3em;
+	width: auto;
 	height: 100%;
-	background-color: red;
+	*background-color: red;
 	float: left;
+	margin-left: 4.5em;
 }
 
 .logoBox img {
 	width: auto;
 	height: 100%;
+}
+
+@media screen and (max-width:900px) {
+	.navigationLinks {
+		margin-right: 2.5em;
+	}
+
+	.logoBox {margin-left: 0.5em;}
 }

@@ -18,9 +18,13 @@
 				<a href=""><li>About us</li></a>
 				<a href=""><li>Contact</li></a>
 			</ul>
+			<div class="navigationButton"></div>
 			<div class="clear"></div>
 		</div>
 	</nav>
+
+
+
 
 	<div class="homeSlides">
 		<div  id="homeslide_1"></div>
@@ -30,5 +34,16 @@
 		<div  id="homeslide_5"></div>
 		
 	</div>
+
+<script src="main.js"></script>
+<script type="text/javascript">
+
+	$('.navigationButton').click(function(){
+
+	  $('.navigationBar').toggleClass('transitionTop');
+	});
+
+
+</script>
 </body>
 </html>

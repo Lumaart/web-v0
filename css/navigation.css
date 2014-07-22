@@ -43,10 +43,52 @@
 	height: 100%;
 }
 
+.navigaitonButton {display: none;}
+
 @media screen and (max-width:900px) {
 	.navigationLinks {
 		margin-right: 2.5em;
 	}
 
 	.logoBox {margin-left: 0.5em;}
+}
+
+@media screen and (max-width: 665px) {
+	.navigationBar {
+		height: 20.5em;
+		padding: 0;
+		top: -15.9em;
+		transition: top 300ms ease;
+	}
+
+	.transitionTop {top:0;}
+
+	.navigationLinks {
+		line-height: 3em; 
+		float: none;
+		text-indent: 2em;}
+
+	.navigationLinks li{display: list-item; }
+
+	.logoBox { 
+		width: 12em;
+		height: 3.5em;
+		position: absolute;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		margin: 0 auto 0.5em auto;
+		float: none;
+	}
+
+	.navigationButton {
+		display: block;
+		width: 2.5em;
+		height: 2.5em;
+		background-color: red;
+		position: absolute;
+		right: 0;
+		bottom: 0;
+		margin: 0 2em 1em 0;
+	}
 }

@@ -1,5 +1,14 @@
 .navigationBar {
 	width: 100%;
 	height: 5em;
-	background-color: rgba(0,255,255,0-7);
+	background-color: rgba(0,255,255,0.7);
+}
+
+.navigationLinks {
+	list-style: none;
+	display: inline;
+}
+
+.navigationLinks a {
+	text-decoration: none;
 }

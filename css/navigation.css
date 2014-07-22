@@ -4,7 +4,11 @@
 	background-color: rgba(50,25,255,0.7);
 	position: fixed;
 	padding: 0.4em;
+	transition:height 250ms ease;
+	filter:blur (15px);
 }
+
+.transitionScroll {height: 3.5em;}
 
 .navigationLinks {
 	list-style: none;
@@ -12,8 +16,10 @@
 	float: right;
 	*background-color: green;
 	margin-right: 6.5em;
+	transition:line-height 250ms ease;
 }
 
+.transitionScrollLinks {line-height: 3.5em;}
 .navigationLinks li {
 	margin-right: 1.5em;
 	display: inline;
@@ -44,6 +50,8 @@
 }
 
 .navigaitonButton {display: none;}
+
+
 
 @media screen and (max-width:900px) {
 	.navigationLinks {

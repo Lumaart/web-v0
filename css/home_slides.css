@@ -1,11 +1,12 @@
 .homeSlides{
-	width:  100%;
+	width:   100%;
+	height:  55em;   /* no vh fallback*/
 	height: 100vh;
 }
 
 .homeSlides>div {
-	width: 	 100%;
-	height: 100vh;
+	width: 	100%;
+	height: 100%;
 }
 
 #homeslide_1{

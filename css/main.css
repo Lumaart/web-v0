@@ -7,3 +7,5 @@ body {
 	font-size: 12px;
 	font-family: "Open Sans";
 }
+
+.clear { clear: both;}

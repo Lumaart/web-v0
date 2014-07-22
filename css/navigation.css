@@ -2,13 +2,34 @@
 	width: 100%;
 	height: 5em;
 	background-color: rgba(0,255,255,0.7);
+	position: relative;
 }
 
 .navigationLinks {
 	list-style: none;
+	line-height: 5em;
+	float: right;
+	background-color: green;
+}
+
+.navigationLinks li {
+	margin-right: 1.5em;
 	display: inline;
 }
 
-.navigationLinks a {
+.navigationLinks a, .navigationLinks a:hover,.navigationLinks a:visited, .navigationLinks a:active {
 	text-decoration: none;
+	color: #fff;
+}
+
+.logoBox {
+	width: 3em;
+	height: 100%;
+	background-color: red;
+	float: left;
+}
+
+.logoBox img {
+	width: auto;
+	height: 100%;
 }

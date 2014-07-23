@@ -5,15 +5,15 @@ $(document).click(function (e){
         $('.navigationBar').toggleClass('transitionTop');
     }
     // close navigation if anything except 'nav' and it's children is clicked 
-    else if ( $('nav').has(e.target).length === 0){	
+    else if ( $('nav').has(e.target).length == 0){	
         $('.navigationBar').removeClass('transitionTop');
     }
 
 
 });
 
-$(document).on("scroll",function(){
-    if($(document).scrollTop()>100){
+$('div').on("scroll",function(){
+    if($(document).scrollTop()>100 ||  $('.homeSlides').scrollTop()>100 ){
     	if (!$('.navigationBar').hasClass('transitionScroll')){
        		 $('.navigationBar').addClass('transitionScroll');
 			 $('.navigationLinks').addClass('transitionScrollLinks');

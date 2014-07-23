@@ -43,6 +43,11 @@
 <script src="js/jquery.mobile.custom.min.js"></script>
 <script src="js/jquery.mousewheel.min.js"></script>
 <script src="js/navigation.js"></script>
-<script src="js/home_slider.js"></script>
+<script>
+$(function(){
+    if (screen.width > 665) {
+        $.getScript("js/home_slider.js");
+    }
+});</script>
 </body>
 </html>

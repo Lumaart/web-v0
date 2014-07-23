@@ -36,9 +36,16 @@ function recalibrate_slides(){
 $(document).ready(function(){
 	slideNb = holder.children().length;
 	holder.css({'overflow': 'hidden'});
-	holder.on('mousewheel', function(event) {
-		slide(event.deltaY);
-	}); 
+
+	holder.on({
+    mousewheel: function(event) {
+        slide(event.deltaY);
+    },
+    wipeDown: function(event) {
+        slide(-1);// Handle mouseleave...
+        console.log(event)
+    }
+});
 });
 
 $(window).resize(function(){

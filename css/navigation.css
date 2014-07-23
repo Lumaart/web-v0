@@ -14,7 +14,6 @@
 	list-style: none;
 	line-height: 5em;
 	float: right;
-	*background-color: green;
 	margin-right: 6.5em;
 	transition:line-height 250ms ease;
 }
@@ -39,7 +38,6 @@
 .logoBox {
 	width: auto;
 	height: 100%;
-	*background-color: red;
 	float: left;
 	margin-left: 4.5em;
 }
@@ -67,6 +65,7 @@
 		padding: 0;
 		top: -15.9em;
 		transition: top 300ms ease;
+		box-shadow: 0 0 50px white;
 	}
 
 	.transitionTop {top:0;}

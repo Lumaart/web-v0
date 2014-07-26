@@ -16,10 +16,13 @@ $('div').on("scroll",function(){
     if($(document).scrollTop()>100 ||  $('.homeSlides').scrollTop()>100 ){
     	if (!$('.navigationBar').hasClass('transitionScroll')){
        		 $('.navigationBar').addClass('transitionScroll');
-			 $('.navigationLinks').addClass('transitionScrollLinks');
+             $('.navigationLinks').addClass('transitionScrollLinks');
+             $('.logoBox').addClass('transitionScrollLogoBox');
 		}
     } else{
         $('.navigationBar').removeClass('transitionScroll');
 		$('.navigationLinks').removeClass('transitionScrollLinks');
+        $('.logoBox').removeClass('transitionScrollLogoBox');
+
     }
 });

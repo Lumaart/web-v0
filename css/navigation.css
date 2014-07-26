@@ -3,11 +3,10 @@
 	height: 5em;
 	position: fixed;
 	padding: 0.4em;
-	-webkit-transition:height 250ms ease;
-	        transition:height 250ms ease;
+	-webkit-transition:height 300ms ease;
+	        transition:height 300ms ease;
 	background-color: rgba(10,10,10,0.5);
 }
-
 
 .transitionScroll {height: 3.5em;}
 
@@ -16,11 +15,13 @@
 	line-height: 5em;
 	float: right;
 	margin-right: 6.5em;
-	-webkit-transition:line-height 250ms ease;
-	        transition:line-height 250ms ease;
+	-webkit-transition:line-height 300ms ease;
+	        transition:line-height 300ms ease,
+	        		   margin-right 300ms ease;
 }
 
-.transitionScrollLinks {line-height: 3.5em;}
+.transitionScrollLinks {line-height: 3.5em; margin-right: 11.5em;}
+
 .navigationLinks li {
 	margin-right: 1.5em;
 	display: inline;
@@ -45,16 +46,10 @@
 	background-size: auto 100%; 
 	float: left;
 	margin-left: 4.5em;
-
-
-
-	
+	transition: margin-left 300ms ease;
 }
 
-/*.logoBox img {
-	width: auto;
-	height: 99%;
-}*/
+.transitionScrollLogoBox { margin-left: 9.5em;}
 
 .navigaitonButton {display: none;}
 

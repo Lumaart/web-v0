@@ -45,7 +45,7 @@ $(document).ready(function(){
         slide(-1);// Handle mouseleave...
         console.log(event)
     }
-});
+	});
 });
 
 $(window).resize(function(){

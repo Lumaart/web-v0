@@ -68,9 +68,7 @@
 		padding: 0;
 		top: -15.9em;
 		-webkit-transition: top 300ms ease;
-		        transition: top 300ms ease;
-
-		
+		        transition: top 300ms ease;		
 	}
 
 	.transitionTop {top:0;}

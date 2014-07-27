@@ -66,12 +66,12 @@
 	.navigationBar {
 		height: 20.5em;
 		padding: 0;
-		top: -15.9em;
-		-webkit-transition: top 300ms ease;
-		        transition: top 300ms ease;		
+		transform:translate3d(0, -15.9em,0);
+		-webkit-transition: transform 300ms ease;
+		        transition: transform 300ms ease;		
 	}
 
-	.transitionTop {top:0;}
+	.transitionTop {transform:translate3d(0, 0,0);}
 
 	.navigationLinks {
 		line-height: 3em; 

@@ -1,3 +1,6 @@
+// ios safari click event bubbling hack
+$('.navigationButton').click(function(e){});
+$('body>div').click(function(e){});
 
 $(document).click(function (e){
 	// toggle if navigation button is clicked 
@@ -8,8 +11,6 @@ $(document).click(function (e){
     else if ( $('nav').has(e.target).length == 0){	
         $('.navigationBar').removeClass('transitionTop');
     }
-
-
 });
 
 $('div').on("scroll",function(){

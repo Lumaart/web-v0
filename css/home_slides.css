@@ -1,7 +1,6 @@
 .homeSlides{
-	width:   100%;
-	height:  55em;   /* no vh fallback*/
-	height: 100vh;
+	width:  100%;
+	height: 100%;
 }
 
 .homeSlides>div {

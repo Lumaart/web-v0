@@ -44,8 +44,8 @@
 <script src="js/jquery.mousewheel.min.js"></script>
 <script src="js/navigation.js"></script>
 <script>
-$(function(){
-    if (screen.width > 665) {
+$(function(){ // if not mobile, load js slider
+    if (!('ontouchstart' in document.documentElement)) {
         $.getScript("js/home_slider.js");
     }
 });</script>

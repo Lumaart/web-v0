@@ -5,7 +5,7 @@
 	padding: 0.4em;
 	-webkit-transition:height 300ms ease;
 	        transition:height 300ms ease;
-	background-color: rgba(10,10,10,0.5);
+	background-color: rgba(10,10,10,0.7);
 }
 
 .transitionScroll {height: 3.5em;}
@@ -15,27 +15,43 @@
 	line-height: 5em;
 	float: right;
 	margin-right: 6.5em;
-	-webkit-transition:line-height 300ms ease;
-	        transition:line-height 300ms ease,
-	        		   margin-right 300ms ease;
+	-webkit-transition: all 300ms ease;
+	        transition: all 300ms ease,
 }
 
-.transitionScrollLinks {line-height: 3.5em; margin-right: 11.5em;}
+.transitionScrollLinks {
+	line-height: 3.5em; 
+	margin-right: 11.5em;
+}
 
 .navigationLinks li {
-	margin-right: 1.5em;
 	display: inline;
+	border-color:    rgba(255,255,255,0);
+	transition: border-color 185ms ease
 }
 
-.navigationLinks a:last-child li{
-	margin-right: 0;
+.navigationBar li:hover { 
+	padding-bottom: 8px;
+	border-bottom:  solid 0.1em rgba(255,255,255,0.7);
 }
 
-.navigationLinks a, .navigationLinks a:hover,.navigationLinks a:visited, .navigationLinks a:active {
+.navigationLinks a{
+	padding: 0.5em;
+	margin-right: 1.5em;
 	text-decoration: none;
 	color: #fff;
 	font-weight: 300;
 	font-size: 1.3em;
+}
+
+.navigationLinks a:last-child{
+	margin-right: 0;
+}
+
+
+.navigationLinks a:active, .navigationLinks a:visited {
+	color: #fff;
+	text-decoration: none;
 }
 
 .logoBox {
@@ -55,7 +71,7 @@
 .navigaitonButton {display: none;}
 
 
-@media screen and (max-width:900px) {
+@media screen and (max-width:925px) {
 	.navigationLinks {
 		margin-right: 2.5em;
 	}
@@ -63,7 +79,7 @@
 	.logoBox {margin-left: 0.5em;}
 }
 
-@media screen and (max-width: 665px) {
+@media screen and (max-width: 710px) {
 	.navigationBar {
 		height: 20.5em;
 		padding: 0;
@@ -77,11 +93,32 @@
 	.transitionTop {-webkit-transform:translate3d(0, 0,0);transform:translate3d(0, 0,0);}
 
 	.navigationLinks {
-		line-height: 3em; 
+		line-height: 2.6em; 
 		float: none;
-		text-indent: 2em;}
+		text-indent: 2em;
+		width: 12em;
+	}
 
-	.navigationLinks li{display: list-item; }
+	.navigationLinks li{
+		width: auto;
+		border-bottom: none;
+		display: list-item;
+	}
+
+	.navigationLinks li:hover {
+		border-bottom: none;
+		padding: 0;
+	}
+
+	.navigationLinks li:first-child {margin-top: 0.4em;}
+
+	.navigationLinks a {
+		width: auto;
+		padding: 0;
+		margin: 0;	
+	}
+
+	
 
 	.logoBox { 
 		width: 12em;

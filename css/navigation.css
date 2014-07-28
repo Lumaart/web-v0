@@ -118,7 +118,9 @@
 		margin: 0;	
 	}
 
-	
+	.navigationLinks a:active {
+		text-decoration: underline;
+	}
 
 	.logoBox { 
 		width: 12em;

@@ -16,6 +16,7 @@ function slide_up(){
 	target = $('#homeslide_'+ activeSlideNo)
 	holder.animate({ //animate!
 		scrollTop: holder.scrollTop() + target.offset().top}, 1000);
+	setBullet();
 }
  
  
@@ -24,13 +25,18 @@ function slide_down(){
 	target = $('#homeslide_'+ activeSlideNo)
 	console.log(activeSlideNo)
 	holder.animate({ //animate!
-		scrollTop: holder.scrollTop() + target.offset().top}, 1000);
-
+		scrollTop: holder.scrollTop() + target.offset().top},1000);
+	setBullet();
 }
 
 function recalibrate_slides(){
 	target = $('#homeslide_'+ activeSlideNo)
 	holder.scrollTop( holder.scrollTop() + target.offset().top);
+}
+
+function setBullet(){
+	$('.bulletSlider').find('a.activeBullet').removeClass('activeBullet');
+	$('#bulletslide_'+activeSlideNo).addClass('activeBullet');
 }
 
 $(document).ready(function(){

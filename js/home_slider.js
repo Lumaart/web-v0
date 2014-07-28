@@ -49,7 +49,6 @@ function setBullet(){
 
 
 $(document).ready(function(){
-	$('.bulletSlider').css('display', 'block');
 	slideNb = holder.children().length;
 	holder.css('overflow', 'hidden');
 	holder.on('mousewheel', function(event){

@@ -59,10 +59,8 @@
 .activeBullet{
   width: 0.8em !important;
   height: 0.8em !important;
-  border: 1px solid orange;
-  background-color: rgba(0,0,0,0) !important;
-
-
+  border: 1px solid rgba(0,109,91,1) !important;
+  background-color: rgba(0,109,91,0) !important;
 }
 
 .bulletSlider a{
@@ -70,9 +68,11 @@
   width: 0.6em;
   height: 0.6em;
   margin: 1.5em auto;
-  background-color: orange;
+  border: 0px solid rgba(0,109,91,0);
+  background-color: rgba(0,109,91,1);
   text-indent: -9999px;
   border-radius: 0.6em;
   -moz-border-radius: 0.6em;
   -webkit-border-radius: 0.6em;
+  transition: all 0.5s ease;
 }

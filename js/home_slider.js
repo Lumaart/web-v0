@@ -70,6 +70,6 @@ $('.bulletSlider a').click(function(e){
 });
 
 $(window).resize(function(){
-	recalibrte_slides();
+	recalibrate_slides();
 });
 

@@ -50,11 +50,28 @@ function setBullet(){
 
 $(document).ready(function(){
 	$('.bulletSlider').css('display', 'block');
+
 	slideNb = holder.children().length;
 	holder.css('overflow', 'hidden');
+
 	holder.on('mousewheel', function(event){
         slide(signum(event.deltaY));
     });
+
+	//if mobile
+    if ('ontouchstart' in document.documentElement){
+	    holder.swipe( {
+	        //Generic swipe handler for all directions
+	        swipeUp: function(event, direction, distance, duration, fingerCount, fingerData) {
+	          slide(-1)
+	        },
+	        swipeDown: function(event, direction, distance, duration, fingerCount, fingerData) {
+	          slide(1)
+	        },
+	        //Default is 75px, set to 0 for demo so any distance triggers swipe
+	         threshold:75
+	    });
+	}
 });
 
 function getBulletNb(id){

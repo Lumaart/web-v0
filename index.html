@@ -51,18 +51,24 @@
 <script src="js/jquery.mousewheel.min.js"></script>
 <script src="js/navigation.js"></script>
 <script src="js/randomize_home_pics.js"></script>
-<script src="js/home_slider.js"></script>
+
 
 <script type="text/javascript">
+	// scroll only if not on windows phone
+	$(function(){
+	if(navigator.userAgent.toLowerCase().indexOf("windows phone") == -1)
+        $.getScript("js/home_slider.js");
+   	});
+
 	// hide address bar on  safari ios
 	window.addEventListener("load",function() {
-	// Set a timeout...
 	setTimeout(function(){
-		// Hide the address bar!
 		window.scrollTo(0, 1);
 	}, 0);
-});
+	});
+
 </script>
+
 
 </body>
 </html>

@@ -16,6 +16,18 @@
 
 </head>
 <body>
+	<script type="text/javascript">
+		// Loading screen
+		var load_div = document.createElement('div');
+		load_div.id = 'loading';
+		document.body.appendChild(load_div);
+
+		// remove loading screen
+		$(window).load(function() {
+	    	$('#loading').fadeOut(500,function(){$(this).remove();});
+		});
+	</script>
+
 	<nav>
 		<div class="navigationBar">
 			<div class="logoBox"></div>
@@ -49,17 +61,6 @@
 		<div  id="homeslide_5"></div>
 	</div>
 
-<script type="text/javascript">
-	// Loading screen
-	var load_div = document.createElement('div');
-	load_div.id = 'loading';
-	document.body.appendChild(load_div);
-
-	// remove loading screen
-	$(window).load(function() {
-    	$('#loading').fadeOut(500,function(){$(this).remove();});
-	});
-</script>
 
 
 <script src="js/touchswipe.min.js"></script>

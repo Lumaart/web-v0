@@ -12,6 +12,7 @@
 
 	<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300' rel='stylesheet' type='text/css'>
 	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+
 </head>
 <body>
 	<nav>
@@ -47,10 +48,25 @@
 		<div  id="homeslide_5"></div>
 	</div>
 
+
+
+<script type="text/javascript">
+	// Loading screen
+	$( document ).ajaxStart(function() {
+    	$('body').append('<div id="loading"></div>');
+	});
+	// remove loading screen
+	$(window).load(function() {
+    	$('#loading').fadeOut(500,function(){$(this).remove();});
+	});
+</script>
+
+
 <script src="js/touchswipe.min.js"></script>
 <script src="js/jquery.mousewheel.min.js"></script>
 <script src="js/navigation.js"></script>
 <script src="js/randomize_home_pics.js"></script>
+
 
 
 <script type="text/javascript">

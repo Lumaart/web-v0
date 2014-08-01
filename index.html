@@ -20,7 +20,7 @@
 		// Loading screen
 		var load_div = document.createElement('div');
 		load_div.id = 'loading';
-		document.body.appendChild(load_div);
+		document.body.insertBefore(load_div, document.body.childNodes[0]);
 
 		// remove loading screen
 		$(window).load(function() {

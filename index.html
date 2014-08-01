@@ -16,9 +16,10 @@
 
 	<script type="text/javascript">
 	// Loading screen
-	$( document ).ajaxStart(function() {
-    	$('body').append('<div id="loading"></div>');
-	});
+	var load_div = document.createElement('div');
+	load_div.id = 'loading';
+	document.body.appendChild(load_div);
+
 	// remove loading screen
 	$(window).load(function() {
     	$('#loading').fadeOut(500,function(){$(this).remove();});

@@ -13,6 +13,18 @@
 	<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300' rel='stylesheet' type='text/css'>
 	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 
+
+	<script type="text/javascript">
+	// Loading screen
+	$( document ).ajaxStart(function() {
+    	$('body').append('<div id="loading"></div>');
+	});
+	// remove loading screen
+	$(window).load(function() {
+    	$('#loading').fadeOut(500,function(){$(this).remove();});
+	});
+	</script>
+
 </head>
 <body>
 	<nav>
@@ -49,17 +61,6 @@
 	</div>
 
 
-
-<script type="text/javascript">
-	// Loading screen
-	$( document ).ajaxStart(function() {
-    	$('body').append('<div id="loading"></div>');
-	});
-	// remove loading screen
-	$(window).load(function() {
-    	$('#loading').fadeOut(500,function(){$(this).remove();});
-	});
-</script>
 
 
 <script src="js/touchswipe.min.js"></script>

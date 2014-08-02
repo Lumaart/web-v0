@@ -16,20 +16,6 @@
 
 </head>
 <body>
-	<script type="text/javascript">
-		// Loading screen
-		document.body.classList.add('hidden');
-		var load_div = document.createElement('div');
-		load_div.id = 'loading';
-		document.body.insertBefore(load_div, document.body.childNodes[0]);
-		document.body.classList.remove('hidden')
-		
-
-		// remove loading screen
-		$(window).load(function() {
-	    	$('#loading').fadeOut(500,function(){$(this).remove();});
-		});
-	</script>
 
 	<nav>
 		<div class="navigationBar">
@@ -65,7 +51,20 @@
 	</div>
 
 
+	<script type="text/javascript">
+		// Loading screen
+		document.body.classList.add('hidden');
+		var load_div = document.createElement('div');
+		load_div.id = 'loading';
+		document.body.insertBefore(load_div, document.body.childNodes[0]);
+		document.body.classList.remove('hidden')
+		
 
+		// remove loading screen
+		$(window).load(function() {
+	    	$('#loading').fadeOut(500,function(){$(this).remove();});
+		});
+	</script>
 <script src="js/touchswipe.min.js"></script>
 <script src="js/jquery.mousewheel.min.js"></script>
 <script src="js/navigation.js"></script>

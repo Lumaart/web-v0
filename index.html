@@ -18,9 +18,12 @@
 <body>
 	<script type="text/javascript">
 		// Loading screen
+		document.body.classList.add('hidden');
 		var load_div = document.createElement('div');
 		load_div.id = 'loading';
 		document.body.insertBefore(load_div, document.body.childNodes[0]);
+		document.body.classList.remove('hidden')
+		
 
 		// remove loading screen
 		$(window).load(function() {

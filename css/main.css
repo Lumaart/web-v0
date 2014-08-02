@@ -18,6 +18,7 @@ body {
 }
 
 .clear { clear: both;}
+.hidden{ display:none;}
 
 #loading {
     top:      0;

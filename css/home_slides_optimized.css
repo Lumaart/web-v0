@@ -66,9 +66,9 @@
 .bulletSlider a{
   opacity: 0.7;
   display: block;
-  width: 0.35em;
-  height: 0.35em;
-  margin: 1.55em auto;
+  width: 0.4em;
+  height: 0.4em;
+  margin: 1.5em auto;
   border: 1px solid rgba(245,245,245, 1);
   background-color: rgba(245,245,245, 1);
   border-radius: 50%;

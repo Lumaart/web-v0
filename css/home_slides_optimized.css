@@ -71,8 +71,8 @@
   margin: 1.5em auto;
   border: 1px solid rgba(245,245,245, 1);
   background-color: rgba(245,245,245, 1);
-  border-radius: 50%;
-  -moz-border-radius: 50%;
-  -webkit-border-radius: 50%;
+  border-radius: 0.4em;
+  -moz-border-radius: 0.4em;
+  -webkit-border-radius: 0.4em;
   transition: all 0.5s ease;
 }

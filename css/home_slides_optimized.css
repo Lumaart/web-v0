@@ -60,8 +60,7 @@
 
 
 .activeBullet{
-  border: 1px solid rgba(0,109,91,1) !important;
-  background-color: rgba(0,109,91,0) !important;
+  background-color: rgba(245,245,245, 0) !important;
 }
 
 

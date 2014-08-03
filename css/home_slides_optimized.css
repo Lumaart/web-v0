@@ -65,16 +65,16 @@
 
 
 .bulletSlider a{
-  width:  0.4em;
-  height: 0.4em;
+  width:  0.41em;
+  height: 0.41em;
   opacity:  0.7;
   display: block;
-  margin: 1.5em auto;
+  margin: 1.55em auto;
   text-indent: -9999px;
   border: 1px solid rgba(245,245,245, 1);
   background-color: rgba(245,245,245, 1);
-  border-radius: 0.4em;
-  -moz-border-radius: 0.4em;
-  -webkit-border-radius: 0.4em;
+  border-radius: 0.41em;
+  -moz-border-radius: 0.41em;
+  -webkit-border-radius: 0.41em;
   transition: all 0.5s ease;
 }

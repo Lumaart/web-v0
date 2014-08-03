@@ -28,5 +28,5 @@ body {
     z-index:  1000;
     overflow: hidden;
     position: absolute; 
- 	background: rgba( 127, 127, 127, 1 )  url(../images/ajax-loader.gif) no-repeat center center fixed;                
+ 	background: rgba( 0,0,0, 1 )  url(../images/luma-loader.gif) no-repeat center center fixed;                
 }

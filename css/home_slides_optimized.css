@@ -60,22 +60,19 @@
 
 
 .activeBullet{
-  width: 0.7em !important;
-  height: 0.7em !important;
-  border: 1px solid rgba(0,109,91,1) !important;
-  background-color: rgba(0,109,91,0) !important;
+  background-color: rgba(245,245,245, 0) !important;
 }
 
 .bulletSlider a{
+  opacity: 0.7;
   display: block;
-  width: 0.5em;
-  height: 0.5em;
-  margin: 1.5em auto;
-  border: 0px solid rgba(0,109,91,0);
-  background-color: rgba(0,109,91,1);
-  text-indent: -9999px;
-  border-radius: 0.5em;
-  -moz-border-radius: 0.5em;
-  -webkit-border-radius: 0.5em;
+  width: 0.35em;
+  height: 0.35em;
+  margin: 1.55em auto;
+  border: 1px solid rgba(245,245,245, 1);
+  background-color: rgba(245,245,245, 1);
+  border-radius: 50%;
+  -moz-border-radius: 50%;
+  -webkit-border-radius: 50%;
   transition: all 0.5s ease;
 }

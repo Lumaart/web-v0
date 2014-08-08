@@ -1,6 +1,10 @@
 var activeSlideNo = 1;
 var slideNb = 0;
-var holder = $('.homeSlides') 
+var holder = $('.homeSlides'); 
+var slides = $('.homeSlides div');
+var bullets = $('.bulletSlider a');
+var target = slides.eq(0);
+
 
 
 function signum(x){
@@ -12,39 +16,26 @@ function abs(x){
 
 function slide(how_many){
 	if  (holder.is(':animated')) return; //do not animate it an animation is already in motion
-	if ( how_many > 0 && activeSlideNo == 1 ) return; //do not scroll up if at beginning
-	if ( how_many < 0 && activeSlideNo == slideNb) return; //do not scroll down  if at the end
-	(how_many > 0) ? slide_up(abs(how_many)) : slide_down(abs(how_many));
-}
- 
- 
-function slide_up(how_many){
-	activeSlideNo -= how_many;	//keep track of the current slide nb
-	target = $('#homeslide_'+ activeSlideNo)
-	holder.animate({ //animate!
-		scrollTop: holder.scrollTop() + target.offset().top}, 500*(1 + how_many));
-	setBullet();
-}
- 
- 
-function slide_down(how_many){
+	if ( how_many < 0 && activeSlideNo == 1 ) return; //do not scroll up if at beginning
+	if ( how_many > 0 && activeSlideNo == slideNb) return; //do not scroll down  if at the end
+	
 	activeSlideNo += how_many;	//keep track of the current slide nb
-	target = $('#homeslide_'+ activeSlideNo)
+	target = slides.eq(activeSlideNo-1);
+	
 	holder.animate({ //animate!
-		scrollTop: holder.scrollTop() + target.offset().top}, 500*(1 + how_many));
+		scrollTop: holder.scrollTop() + target.offset().top}, 500*(1 + abs(how_many)));
 	setBullet();
 }
-
+ 
 
 function recalibrate_slides(){
-	target = $('#homeslide_'+ activeSlideNo)
+	target = slides.eq(activeSlideNo-1);
 	holder.scrollTop( holder.scrollTop() + target.offset().top);
 }
 
-
 function setBullet(){
 	$('.bulletSlider').find('a.activeBullet').removeClass('activeBullet');
-	$('#bulletslide_'+ activeSlideNo).addClass('activeBullet');
+	bullets.eq(activeSlideNo-1).addClass('activeBullet');
 }
 
 
@@ -53,9 +44,8 @@ $(document).ready(function(){
 
 	slideNb = holder.children().length;
 	holder.css('overflow', 'hidden');
-
 	holder.on('mousewheel', function(event){
-        slide(signum(event.deltaY));
+        slide(-signum(event.deltaY));
     });
 
 	//if mobile
@@ -63,10 +53,10 @@ $(document).ready(function(){
 	    holder.swipe( {
 	        //Generic swipe handler for all directions
 	        swipeUp: function(event, direction, distance, duration, fingerCount, fingerData) {
-	          slide(-1)
+	          slide(-1);
 	        },
 	        swipeDown: function(event, direction, distance, duration, fingerCount, fingerData) {
-	          slide(1)
+	          slide(1);
 	        },
 	        //Default is 75px, set to 0 for demo so any distance triggers swipe
 	         threshold:75
@@ -82,8 +72,8 @@ function getBulletNb(id){
 
 $('.bulletSlider a').click(function(e){
 	var target_slide = getBulletNb($(this).attr('id'));
-	var difference = activeSlideNo - target_slide;
-	slide(difference)
+	var difference = target_slide - activeSlideNo;
+	slide(difference);
 });
 
 $(window).resize(function(){

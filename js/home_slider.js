@@ -66,6 +66,7 @@ $(document).ready(function(){
 
 
 $('.bulletSlider').on('click', 'a', function(e){
+	e.preventDefault();
     var a = $(this);
     var target_slide = parseInt(a.text());
     var difference = target_slide - activeSlideNo;

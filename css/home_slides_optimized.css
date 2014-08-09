@@ -67,9 +67,10 @@
 .bulletSlider a{
   width:  0.41em;
   height: 0.41em;
-  opacity:  0.7;
-  display: block;
-  margin: 1.55em auto;
+  opacity:   0.7;
+  display:  block;
+  cursor: pointer;
+  margin:  1.55em auto;
   text-indent: -9999px;
   border: 1px solid rgba(245,245,245, 1);
   background-color: rgba(245,245,245, 1);

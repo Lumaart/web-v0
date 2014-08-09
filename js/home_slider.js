@@ -64,16 +64,14 @@ $(document).ready(function(){
 	}
 });
 
-function getBulletNb(id){
-	var id_nb = parseInt((id.split('_'))[1]);
-	return isFinite(id_nb) ? id_nb : 0; 
-}
 
-
-$('.bulletSlider a').click(function(e){
-	var target_slide = getBulletNb($(this).attr('id'));
-	var difference = target_slide - activeSlideNo;
-	slide(difference);
+bullets.each(function() {
+	var a = $(this);
+	var target_slide = Number(a.text());
+	a.on("click", function(event) {
+		var difference = target_slide - activeSlideNo;
+		slide(difference);
+	});	
 });
 
 $(window).resize(function(){

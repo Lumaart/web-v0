@@ -65,14 +65,13 @@ $(document).ready(function(){
 });
 
 
-bullets.each(function() {
-	var a = $(this);
-	var target_slide = Number(a.text());
-	a.on("click", function(event) {
-		var difference = target_slide - activeSlideNo;
-		slide(difference);
-	});	
+$('.bulletSlider').on('click', 'a', function(e){
+    var a = $(this);
+    var target_slide = parseInt(a.text());
+    var difference = target_slide - activeSlideNo;
+	slide(difference);
 });
+
 
 $(window).resize(function(){
 	recalibrate_slides();

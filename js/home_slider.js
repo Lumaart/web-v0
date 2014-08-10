@@ -53,10 +53,10 @@ $(document).ready(function(){
 	    holder.swipe( {
 	        //Generic swipe handler for all directions
 	        swipeUp: function(event, direction, distance, duration, fingerCount, fingerData) {
-	          slide(-1);
+	          slide(1);
 	        },
 	        swipeDown: function(event, direction, distance, duration, fingerCount, fingerData) {
-	          slide(1);
+	          slide(-1);
 	        },
 	        //Default is 75px, set to 0 for demo so any distance triggers swipe
 	         threshold:75

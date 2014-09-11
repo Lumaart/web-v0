@@ -23,7 +23,7 @@ function slide(how_many){
 	target = slides.eq(activeSlideNo-1);
 	
 	holder.animate({ //animate!
-		scrollTop: holder.scrollTop() + target.offset().top}, 500*(1 + abs(how_many)));
+		scrollTop: holder.scrollTop() + target.offset().top}, 800*(1 + abs(how_many)), 'easeInOutExpo');
 	setBullet();
 }
  
